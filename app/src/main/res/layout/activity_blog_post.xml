@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlogPostActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+
+        <View
+            android:id="@+id/appBar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@color/purple_700"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAppBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Constraint Layout Atividade 1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/appBar"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgHeader"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/androids"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Utilizando Imagens no Android"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imgHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emerson Carvalho"
+            android:textSize="14sp"
+            android:textColor="#555"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17/04/2029"
+            android:textSize="14sp"
+            android:textColor="#555"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAuthor"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan porttitor diam nec faucibus. Curabitur vitae purus non ligula ultricies sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus fringilla, justo et facilisis cursus, urna ex cursus lectus, vel fermentum lectus risus non orci. Phasellus tincidunt elit in risus aliquet, quis posuere lorem fermentum. Sed at orci non metus dignissim interdum. Quisque vitae felis vitae odio aliquet blandit. Integer eget purus vitae lorem tempor suscipit. Donec ac mauris ac dui vestibulum faucibus. Cras nec arcu sit amet orci fermentum pellentesque. Curabitur vitae sem a tortor aliquet facilisis et eu dui. Proin non dolor nec nibh pellentesque consequat id sit amet odio."
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
+
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ANTERIOR"
+            app:layout_constraintTop_toBottomOf="@id/tvBody"
+            app:layout_constraintStart_toStartOf="@id/tvBody"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="PRÓXIMO"
+            app:layout_constraintTop_toBottomOf="@id/tvBody"
+            app:layout_constraintEnd_toEndOf="@id/tvBody"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

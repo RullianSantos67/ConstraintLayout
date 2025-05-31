@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tituloCabecalho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:text="Constraint Layout Atividade 3"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Melhor Texto"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tituloCabecalho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollEsquerda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineMiddle"
+        app:layout_constraintBottom_toTopOf="@id/barrierBottom"
+        app:layout_constraintHeight_percent="0.7">
+
+        <TextView
+            android:id="@+id/textoEsquerda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mauris eget mi ac enim venenatis tempor. Nam in mauris semper, lobortis mi ac, tincidunt erat. Sed sagittis omare felis ac auctor. Aliquam ut consectetur ex. In pretium mauris nunc, eget vestibulum velit ultrices sit amet. Aenean feugiat dignissim vestibulum. Ut vulputate vehicula cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum a nunc quis condimentum. Fusce interdum ex sed egestas consequat. Nulla hendrerit gravida ultrices. Sed accumsan orci tristique, cursus est sed, porta ligula. Vestibulum sollicitudin dapibus mollis. Donec cursus nisl ut cursus lacinia."
+            android:textSize="18sp"
+            android:padding="16dp"/>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollDireita"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="@id/guidelineMiddle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/barrierBottom"
+        app:layout_constraintHeight_percent="0.7">
+
+        <TextView
+            android:id="@+id/textoDireita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Testando os testos de melhor especificaçaõ.Mauris eget mi ac enim venenatis tempor. Nam in mauris semper, lobortis mi ac, ti0ncidunt erat. Sed sagittis omare felis ac auctor. Aliquam ut consectetur ex. In pretium mauris nunc, eget vestibulum velit ultrices sit amet. Aenean feugiat dignissim vestibulum. Ut vulputate vehicula cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum a nunc quis condimentum. Fusce interdum ex sed egestas consequat. Nulla hendrerit gravida ultrices. Sed accumsan orci tristique, cursus est sed, porta ligula."
+            android:textSize="18sp"
+            android:padding="16dp"/>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="scrollEsquerda,scrollDireita"/>
+
+
+    <Button
+        android:id="@+id/btnEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:text="ESQUERDA"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/btnEmpate"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
+
+    <Button
+        android:id="@+id/btnEmpate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMPATE"
+        android:textSize="16sp"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/barrierBottom"
+        app:layout_constraintStart_toEndOf="@id/btnEsquerda"
+        app:layout_constraintEnd_toStartOf="@id/btnDireita"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/btnDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIREITA"
+        android:textSize="16sp"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/barrierBottom"
+        app:layout_constraintStart_toEndOf="@id/btnEmpate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

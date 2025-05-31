@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ConstraintLayouts</string>
+    <string name="button_blog_post">Blog Post</string>
+    <!-- títulos -->
+    <string name="titulo_melhor_texto">Melhor Texto</string>
+
+    <!-- textos primeira tela -->
+    <string name="texto_esquerdo1">Morbi in porttitor tempus ex. Etiam ac posuere est, vitae venenatis turpis. Curabitur nibh est, tempus non bibendum non…</string>
+    <string name="texto_direito1">Lorem ipsum sit amet, consectetur adipiscing elit. Nam interdum a nunc quis condimentum…</string>
+
+    <!-- textos segunda tela -->
+    <string name="texto_esquerdo2">Mauris eget mi ac enim venenatis tempor. Nam in mauris semper, lobortis mi ac, tincidunt erat…</string>
+    <string name="texto_direito2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum ex sed egestas consequat…</string>
+
+    <!-- botões -->
+    <string name="esquerda">ESQUERDA</string>
+    <string name="empate">EMPATE</string>
+    <string name="direita">DIREITA</string>
+</resources>
